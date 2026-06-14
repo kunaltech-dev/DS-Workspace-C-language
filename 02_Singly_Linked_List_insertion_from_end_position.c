@@ -1,16 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct node
-{
+struct node{
     int data;
     struct node *next;
 };
 
 struct node *temp, *head = NULL;
 
-void insert_E(int value)
-{
+void insert_E(int value){
     struct node *new_node;
     new_node = (struct node *)malloc(sizeof(struct node));
     new_node->data = value;
