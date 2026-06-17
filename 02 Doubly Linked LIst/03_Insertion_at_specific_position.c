@@ -115,7 +115,7 @@ void freeList(){
 int main(){
     int p, num;
     char extra;
-    printf("Enter: \n0 -> terminate program\n1 -> insertion at specific position \n2 -> display \n3 -> reverse display\n");
+    printf("Enter: \n0 -> terminate program \n1 -> insertion at specific position \n2 -> display \n3 -> reverse display\n");
     while (1){
         while (1){
             printf("Enter Your choice: ");
