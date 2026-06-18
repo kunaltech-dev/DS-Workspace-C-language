@@ -237,6 +237,27 @@ void reverse_d(){
     printf("<->NULL\n");
 }
 
+void search_N(){
+struct node *temp=head;
+int value;
+printf("Enter the number you want to find: ");
+scanf("%d",&value);
+if(head == NULL){
+    printf("Linked List is Empty! Please insert data first.\n");
+        return;
+}
+else{
+while(temp != NULL){
+    if(temp->data == value){
+        printf("%d is present in Linked List\n",value);
+            return;
+    }
+    temp=temp->next;
+}
+printf("%d is not present in Linked List\n",value);
+}
+}
+
 void freeList(){
     struct node *temp;
     while (head != NULL){
@@ -254,17 +275,17 @@ int main(){
     printf("\n2 -> Insertion at End Position \n3 -> Insertion at Specific Position");
     printf("\n4 -> Deletion From First Position \n5 -> Deletion From End Position");
     printf("\n6 -> Deletion From Specific Position \n7 -> Count Total node");
-    printf("\n8 -> Display \n9 -> Reverse Display");
+    printf("\n8 -> Display \n9 -> Reverse Display \n10 -> Search Value");
 
     while (1){        
         while (1){
             printf("\nEnter Your choice= ");
             if (scanf("%d%c", &num, &extra) == 2 && extra == '\n'){
-                if (num >= 0 && num <= 9){
+                if (num >= 0 && num <= 10){
                     break;
                 }
                 else{
-                    printf("Invalid range! Enter any number from 0 to 9.\n");
+                    printf("Invalid range! Enter any number from 0 to 10.\n");
                 }
             }
             else{
@@ -321,6 +342,10 @@ int main(){
 
         case 9:
             reverse_d();
+            break;
+
+        case 10:
+            search_N();
             break;
         }
     }
