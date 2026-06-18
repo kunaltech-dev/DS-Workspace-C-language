@@ -264,7 +264,7 @@ int main(){
                     break;
                 }
                 else{
-                    printf("Invalid range! Enter any number from 0 to 3.\n");
+                    printf("Invalid range! Enter any number from 0 to 9.\n");
                 }
             }
             else{
